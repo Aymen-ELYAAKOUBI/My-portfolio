@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Fast Delivery — application de livraison</title>
+  <desc id="desc">Illustration bleu nuit d'une application de livraison avec une carte, un itinéraire lumineux et un livreur à scooter.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080f2e"/>
+      <stop offset=".55" stop-color="#101a4b"/>
+      <stop offset="1" stop-color="#27105c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3977ff"/>
+      <stop offset="1" stop-color="#a44cff"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#40e0ff"/>
+      <stop offset="1" stop-color="#747cff"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101a35"/>
+      <stop offset="1" stop-color="#080d20"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0" stop-color="#365fff" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#365fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18"/>
+      <feOffset dy="18"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#92a9ff" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="850" cy="380" r="390" fill="url(#halo)"/>
+  <path d="M0 690 190 620l160 40 180-110 190 64 175-124 305 42v268H0z" fill="#080d23" opacity=".72"/>
+  <path d="m30 661 175-66 157 39 180-115 190 57 175-112 188 28" fill="none" stroke="#6f55ff" stroke-opacity=".35" stroke-width="4"/>
+  <g fill="#172550" opacity=".72">
+    <path d="M52 540h54v154H52zM116 492h42v202h-42zM168 566h70v128h-70zM1035 504h52v190h-52zM1095 454h59v240h-59zM1164 548h36v146h-36z"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g transform="translate(72 92)">
+      <rect width="84" height="84" rx="25" fill="url(#glow)"/>
+      <path d="M19 48h42l-5-11H34l-5 7H19zm5 6a7 7 0 1 0 14 0zm28 0a7 7 0 1 0 14 0z" fill="#fff"/>
+      <path d="M61 22c-8 0-14 6-14 14 0 10 14 23 14 23s14-13 14-23c0-8-6-14-14-14zm0 19a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" fill="#ff5db4"/>
+    </g>
+    <text x="181" y="146" fill="#fff" font-size="58" font-weight="800" letter-spacing="-2">FAST</text>
+    <text x="181" y="205" fill="#63caff" font-size="58" font-weight="800" letter-spacing="-2">DELIVERY</text>
+    <text x="75" y="277" fill="#c8d4ff" font-size="24" font-weight="500">Suivi des livraisons, simplement.</text>
+    <g transform="translate(78 326)">
+      <circle cx="20" cy="20" r="20" fill="#283c8c"/>
+      <path d="M20 8v13l9 5" fill="none" stroke="#71d8ff" stroke-width="3" stroke-linecap="round"/>
+      <text x="55" y="27" fill="#f5f7ff" font-size="22" font-weight="600">Itinéraires sur carte</text>
+    </g>
+    <g transform="translate(78 390)">
+      <circle cx="20" cy="20" r="20" fill="#283c8c"/>
+      <path d="m11 20 6 6 12-14" fill="none" stroke="#71d8ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="55" y="27" fill="#f5f7ff" font-size="22" font-weight="600">Suivi des commandes</text>
+    </g>
+    <g transform="translate(78 454)">
+      <circle cx="20" cy="20" r="20" fill="#283c8c"/>
+      <path d="M20 30s10-10 10-17a10 10 0 1 0-20 0c0 7 10 17 10 17z" fill="none" stroke="#71d8ff" stroke-width="2.5"/>
+      <circle cx="20" cy="13" r="3" fill="#71d8ff"/>
+      <text x="55" y="27" fill="#f5f7ff" font-size="22" font-weight="600">Pensée pour les livreurs</text>
+    </g>
+  </g>
+  <!-- Delivery rider illustration -->
+  <g transform="translate(116 543)" filter="url(#shadow)">
+    <ellipse cx="159" cy="155" rx="127" ry="18" fill="#000" opacity=".42"/>
+    <circle cx="82" cy="128" r="32" fill="#11172f" stroke="#a7b9ff" stroke-width="7"/>
+    <circle cx="82" cy="128" r="10" fill="#6e83ff"/>
+    <circle cx="229" cy="128" r="32" fill="#11172f" stroke="#a7b9ff" stroke-width="7"/>
+    <circle cx="229" cy="128" r="10" fill="#6e83ff"/>
+    <path d="m82 128 42-51 44 51H82l24-32h71l52 32M166 128l26-54h27" fill="none" stroke="#e2e9ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M121 73q26-29 62-7l25 37h-65z" fill="url(#glow)" stroke="#9dc2ff" stroke-width="4"/>
+    <path d="M137 49q8-36 43-27l26 26-15 18h-37z" fill="#734cff" stroke="#bfd5ff" stroke-width="4"/>
+    <path d="m130 57 30 4" stroke="#e4f3ff" stroke-width="5" stroke-linecap="round"/>
+    <rect x="184" y="8" width="66" height="65" rx="12" fill="#763cff" stroke="#b2a1ff" stroke-width="4" transform="rotate(7 184 8)"/>
+    <path d="m195 35 40 5m-37 8 23 3" stroke="#eaf6ff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- Map phone -->
+  <g transform="translate(548 78)" filter="url(#shadow)">
+    <rect width="352" height="652" rx="48" fill="#050914" stroke="#9fb0e8" stroke-width="4"/>
+    <rect x="13" y="14" width="326" height="624" rx="38" fill="url(#screen)"/>
+    <rect x="116" y="25" width="120" height="19" rx="10" fill="#03060d"/>
+    <text x="37" y="57" fill="#f6f8ff" font-size="14" font-weight="700">9:41</text>
+    <g transform="translate(31 81)">
+      <text x="0" y="20" fill="#f7f8ff" font-size="21" font-weight="700">Suivi de livraison</text>
+      <text x="0" y="45" fill="#94a5d6" font-size="13">Commande #FD-2048</text>
+      <rect x="0" y="65" width="290" height="415" rx="22" fill="#111b38" stroke="#293966"/>
+      <path d="M18 161 79 117l52 30 54-48 86 45M17 220l59-35 42 35 51-42 97 60M24 304l44-53 59 26 50-38 91 46M22 393l58-39 46 30 67-55 76 24" fill="none" stroke="#31436c" stroke-width="7" stroke-linecap="round"/>
+      <path d="m30 357 62-55 35 14 37-84 56-32 42-77" fill="none" stroke="url(#route)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30" cy="357" r="12" fill="#43e3ac" stroke="#fff" stroke-width="4"/>
+      <circle cx="262" cy="123" r="14" fill="#ff6ba8" stroke="#fff" stroke-width="4"/>
+      <g transform="translate(141 199)">
+        <circle r="25" fill="#2672ff" stroke="#d9f4ff" stroke-width="4"/>
+        <path d="M-12 4h23l-3-7H-4l-3 5h-5zm4 8a4 4 0 1 0 8 0zm15 0a4 4 0 1 0 8 0z" fill="#fff"/>
+      </g>
+      <rect x="28" y="424" width="234" height="42" rx="21" fill="#19264b" stroke="#354a81"/>
+      <circle cx="49" cy="445" r="7" fill="#42e2ad"/>
+      <text x="66" y="450" fill="#fff" font-size="13" font-weight="600">Livreur en route</text>
+      <rect x="0" y="493" width="290" height="89" rx="18" fill="#111b38" stroke="#26365f"/>
+      <circle cx="30" cy="526" r="11" fill="#42e2ad"/>
+      <text x="55" y="523" fill="#f7f8ff" font-size="14" font-weight="700">Commande récupérée</text>
+      <text x="55" y="546" fill="#9eadd4" font-size="12">Arrivée estimée : 12 min</text>
+      <path d="M30 540v25" stroke="#42e2ad" stroke-width="2" stroke-dasharray="3 4"/>
+      <circle cx="30" cy="570" r="7" fill="#35456f"/>
+      <text x="55" y="576" fill="#9eadd4" font-size="12">En direction du client</text>
+    </g>
+  </g>
+  <!-- Floating route pin -->
+  <g transform="translate(978 116)">
+    <circle r="40" fill="#286eff" opacity=".22"/>
+    <path d="M0-24c-13 0-23 10-23 23 0 17 23 38 23 38S23 16 23-1C23-14 13-24 0-24zm0 31a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="#50baff"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="786" y="697" width="335" height="54" rx="27" fill="#0d1737" stroke="#344981"/>
+    <circle cx="818" cy="724" r="7" fill="#42e2ad"/>
+    <text x="840" y="731" fill="#f3f6ff" font-size="17" font-weight="700">Kotlin</text>
+    <circle cx="922" cy="724" r="4" fill="#6f88ff"/>
+    <text x="940" y="731" fill="#f3f6ff" font-size="17" font-weight="700">Jetpack Compose</text>
+  </g>
+</svg>
