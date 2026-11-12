@@ -1754,6 +1754,130 @@ html {
     transition-delay: 0.2s;
 }
 
+/* Fast Delivery project details dialog */
+.project-image-trigger {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.project-image-trigger:focus-visible,
+.project-dialog-close:focus-visible,
+.project-dialog-link:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 4px;
+}
+.project-dialog {
+    width: min(680px, calc(100vw - 2rem));
+    max-width: none;
+    max-height: min(88vh, 860px);
+    padding: 0;
+    overflow: auto;
+    color: #e5e7eb;
+    background: #111827;
+    border: 1px solid rgba(96, 165, 250, .45);
+    border-radius: 24px;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .65);
+}
+.project-dialog::backdrop {
+    background: rgba(3, 7, 18, .78);
+    backdrop-filter: blur(7px);
+}
+.project-dialog-content {
+    padding: clamp(1.25rem, 4vw, 2rem);
+}
+.project-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.project-dialog-close {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(148, 163, 184, .35);
+    border-radius: 50%;
+    color: #e5e7eb;
+    background: rgba(31, 41, 55, .8);
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.project-dialog-kicker {
+    color: #60a5fa;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.project-dialog h2 {
+    margin: .4rem 0 .75rem;
+    color: #fff;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+}
+.project-dialog p,
+.project-dialog li {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+.project-dialog h3 {
+    margin: 1.4rem 0 .5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+.project-dialog ul {
+    margin: .4rem 0;
+    padding-left: 1.25rem;
+}
+.project-dialog .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: .75rem;
+}
+.project-dialog .project-stack span,
+.project-status {
+    padding: .35rem .7rem;
+    border: 1px solid rgba(96, 165, 250, .35);
+    border-radius: 999px;
+    color: #93c5fd;
+    background: rgba(59, 130, 246, .12);
+    font-size: .8rem;
+}
+.project-status {
+    display: inline-block;
+    color: #fcd34d;
+    border-color: rgba(252, 211, 77, .35);
+    background: rgba(252, 211, 77, .1);
+}
+.project-dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+.project-dialog-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: .65rem 1rem;
+    border: 1px solid rgba(96, 165, 250, .5);
+    border-radius: 12px;
+    color: #bfdbfe;
+    text-decoration: none;
+    transition: background .2s ease, transform .2s ease;
+}
+.project-dialog-link:hover {
+    background: rgba(59, 130, 246, .2);
+    transform: translateY(-1px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .project-dialog-link { transition: none; }
+}
     </style>
 </head>
 <body>
@@ -2009,19 +2133,31 @@ html {
             <!-- Project 2: Fast Delivery Android App -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-blue-400 hover:shadow-lg hover:shadow-blue-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <img
-                        src="Fast-Delevery-App.png"
-                        alt="Fast Delivery : application Android de livraison avec carte et suivi des commandes"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    <button
+                        type="button"
+                        class="project-image-trigger"
+                        data-open-fast-delivery
+                        aria-haspopup="dialog"
+                        aria-controls="fastDeliveryDialog"
+                        aria-label="Afficher les détails du projet Fast Delivery"
                     >
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                        <img
+                            src="Fast-Delevery-App.png"
+                            alt="Fast Delivery, application Android de livraison"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        >
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">
+                            Cliquer pour les détails
+                        </span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
                         Fast Delivery
                     </h3>
                     <p class="text-gray-400 mb-4 text-sm">
-                        Application Android de gestion de livraisons avec suivi des commandes, carte interactive et visualisation des itinéraires. L’intégration Firebase est en cours.
+                        Application Android de livraison avec comptes client, livreur et entreprise, demandes partagées et statuts synchronisés avec Firebase.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 text-xs rounded-full bg-blue-400/20 border-blue-400/30 text-blue-400 border">Kotlin</span>
@@ -2206,6 +2342,58 @@ html {
                 </div>
             </div>
         </div>
+
+        <dialog id="fastDeliveryDialog" class="project-dialog" aria-labelledby="fastDeliveryDialogTitle">
+            <div class="project-dialog-content">
+                <div class="project-dialog-header">
+                    <div>
+                        <span class="project-dialog-kicker">Projet Android · Kotlin</span>
+                        <h2 id="fastDeliveryDialogTitle">Fast Delivery</h2>
+                        <span class="project-status">MVP en développement</span>
+                    </div>
+                    <button type="button" class="project-dialog-close" data-close-fast-delivery aria-label="Fermer les détails">&times;</button>
+                </div>
+
+                <p>
+                    Application de livraison avec des espaces distincts pour les clients, les livreurs et les entreprises.
+                    Les clients et entreprises peuvent créer une demande; les livreurs consultent la file et font avancer
+                    son statut. Les mises à jour sont synchronisées avec Firebase.
+                </p>
+
+                <h3>Fonctionnalités</h3>
+                <ul>
+                    <li>Inscription et connexion par e-mail avec Firebase Authentication.</li>
+                    <li>Création et suivi des demandes de livraison dans Cloud Firestore.</li>
+                    <li>File de demandes pour les livreurs et attribution à un seul livreur.</li>
+                    <li>Écrans dédiés aux clients, entreprises et livreurs.</li>
+                </ul>
+
+                <h3>Technologies</h3>
+                <div class="project-stack">
+                    <span>Kotlin</span>
+                    <span>Jetpack Compose</span>
+                    <span>Firebase Auth</span>
+                    <span>Cloud Firestore</span>
+                    <span>Google Maps</span>
+                </div>
+
+                <h3>État du projet</h3>
+                <p>
+                    Le MVP est en cours de validation. Le parcours complet d’une commande, la tarification réelle
+                    et le suivi GPS en direct restent à finaliser. Les prix et certaines étapes de carte sont encore
+                    des données de démonstration.
+                </p>
+
+                <div class="project-dialog-actions">
+                    <a class="project-dialog-link" href="https://github.com/Aymen-ELYAAKOUBI/Fast-Delevery-App" target="_blank" rel="noopener noreferrer">
+                        Voir le code sur GitHub
+                    </a>
+                    <a class="project-dialog-link" href="https://my-portfolio-beta-eight-27.vercel.app" target="_blank" rel="noopener noreferrer">
+                        Ouvrir le portfolio
+                    </a>
+                </div>
+            </div>
+        </dialog>
 
         <!-- View All Projects Button -->
         <div class="flex justify-center mt-12">
@@ -2575,6 +2763,19 @@ html {
                     }
                 });
             });
+
+            // Accessible project details dialog
+            const projectDialog = document.getElementById('fastDeliveryDialog');
+            const openProjectDialog = document.querySelector('[data-open-fast-delivery]');
+            const closeProjectDialog = document.querySelector('[data-close-fast-delivery]');
+
+            if (projectDialog && openProjectDialog && closeProjectDialog) {
+                openProjectDialog.addEventListener('click', () => projectDialog.showModal());
+                closeProjectDialog.addEventListener('click', () => projectDialog.close());
+                projectDialog.addEventListener('click', (event) => {
+                    if (event.target === projectDialog) projectDialog.close();
+                });
+            }
 
             // Form handling
             const form = document.getElementById('contactForm');
