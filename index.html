@@ -2093,13 +2093,25 @@ html {
             <!-- Project 1: Drone with AI -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <img 
-                        src="Drone.webp" 
-                        alt="Drone-with-AI" 
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Drone+Project'"
+                    <button
+                        type="button"
+                        class="project-image-trigger"
+                        data-open-drone
+                        aria-haspopup="dialog"
+                        aria-controls="droneDialog"
+                        aria-label="Afficher les détails du projet Drone with AI"
                     >
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                        <img
+                            src="Drone.webp"
+                            alt="Projet de drone avec intelligence artificielle"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Drone+Project'"
+                        >
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">
+                            Cliquer pour les détails
+                        </span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -2343,6 +2355,43 @@ html {
             </div>
         </div>
 
+        <dialog id="droneDialog" class="project-dialog" aria-labelledby="droneDialogTitle">
+            <div class="project-dialog-content">
+                <div class="project-dialog-header">
+                    <div>
+                        <span class="project-dialog-kicker">Projet robotique · Arduino</span>
+                        <h2 id="droneDialogTitle">Drone-with-AI</h2>
+                        <span class="project-status">Projet en développement</span>
+                    </div>
+                    <button type="button" class="project-dialog-close" data-close-drone aria-label="Fermer les détails">&times;</button>
+                </div>
+
+                <p>
+                    Projet de conception d’un drone à partir de zéro, avec l’objectif d’y intégrer des fonctions
+                    d’intelligence artificielle. Cette fiche présente le concept et les technologies prévues.
+                </p>
+
+                <h3>Technologies prévues</h3>
+                <div class="project-stack">
+                    <span>Arduino</span>
+                    <span>C</span>
+                    <span>Intelligence artificielle</span>
+                </div>
+
+                <h3>État du projet</h3>
+                <p>
+                    Le projet est en cours de développement. Les fonctionnalités finales et les capacités du drone
+                    dépendront de l’avancement du matériel et du logiciel.
+                </p>
+
+                <div class="project-dialog-actions">
+                    <a class="project-dialog-link" href="https://github.com/Aymen-ELYAAKOUBI/Drone-with-AI" target="_blank" rel="noopener noreferrer">
+                        Voir le code sur GitHub
+                    </a>
+                </div>
+            </div>
+        </dialog>
+
         <dialog id="fastDeliveryDialog" class="project-dialog" aria-labelledby="fastDeliveryDialogTitle">
             <div class="project-dialog-content">
                 <div class="project-dialog-header">
@@ -2387,9 +2436,6 @@ html {
                 <div class="project-dialog-actions">
                     <a class="project-dialog-link" href="https://github.com/Aymen-ELYAAKOUBI/Fast-Delevery-App" target="_blank" rel="noopener noreferrer">
                         Voir le code sur GitHub
-                    </a>
-                    <a class="project-dialog-link" href="https://my-portfolio-beta-eight-27.vercel.app" target="_blank" rel="noopener noreferrer">
-                        Ouvrir le portfolio
                     </a>
                 </div>
             </div>
@@ -2776,6 +2822,29 @@ html {
                     if (event.target === projectDialog) projectDialog.close();
                 });
             }
+
+            // Accessible project detail dialogs
+            const projectDialogs = [
+                {
+                    dialog: document.getElementById('fastDeliveryDialog'),
+                    openButton: document.querySelector('[data-open-fast-delivery]'),
+                    closeButton: document.querySelector('[data-close-fast-delivery]')
+                },
+                {
+                    dialog: document.getElementById('droneDialog'),
+                    openButton: document.querySelector('[data-open-drone]'),
+                    closeButton: document.querySelector('[data-close-drone]')
+                }
+            ];
+
+            projectDialogs.forEach(({ dialog, openButton, closeButton }) => {
+                if (!dialog || !openButton || !closeButton) return;
+                openButton.addEventListener('click', () => dialog.showModal());
+                closeButton.addEventListener('click', () => dialog.close());
+                dialog.addEventListener('click', (event) => {
+                    if (event.target === dialog) dialog.close();
+                });
+            });
 
             // Form handling
             const form = document.getElementById('contactForm');
