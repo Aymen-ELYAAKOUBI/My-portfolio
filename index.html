@@ -2197,16 +2197,19 @@ html {
             <!-- Project 3: 3D Game with Video -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <video 
-                        src="3D-Game.mp4" 
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        poster="https://placehold.co/600x400/1e293b/38bdf8?text=3D+Game"
-                    ></video>
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                    <button type="button" class="project-image-trigger" data-open-project-details aria-haspopup="dialog" aria-controls="projectDetailsDialog" aria-label="Afficher les détails du projet 3D-Game">
+                        <video
+                            src="3D-Game.mp4"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="https://placehold.co/600x400/1e293b/38bdf8?text=3D+Game"
+                        ></video>
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">Cliquer pour les détails</span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -2239,13 +2242,16 @@ html {
             <!-- Project 4: Tkinter Library App -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <img 
-                        src="PTS.png" 
-                        alt="Tkinter Library Project" 
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Tkinter+Library'"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                    <button type="button" class="project-image-trigger" data-open-project-details aria-haspopup="dialog" aria-controls="projectDetailsDialog" aria-label="Afficher les détails du projet Bibliothèque Tkinter">
+                        <img
+                            src="PTS.png"
+                            alt="Application de bibliothèque réalisée avec Tkinter"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Tkinter+Library'"
+                        >
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">Cliquer pour les détails</span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -2278,13 +2284,16 @@ html {
             <!-- Project 5: Web Site Typing speed test with javascript -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <img 
-                        src="STST.png" 
-                        alt="Web Site Typing speed test with javascript" 
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Typing+Speed+Test'"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                    <button type="button" class="project-image-trigger" data-open-project-details aria-haspopup="dialog" aria-controls="projectDetailsDialog" aria-label="Afficher les détails du test de vitesse de frappe">
+                        <img
+                            src="STST.png"
+                            alt="Site web de test de vitesse de frappe"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Typing+Speed+Test'"
+                        >
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">Cliquer pour les détails</span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -2318,13 +2327,16 @@ html {
             <!-- Project 6: Projet-Tkinter-2 -->
             <div class="group bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/50 transition-all duration-700 cursor-pointer hover:scale-105">
                 <div class="relative overflow-hidden h-48">
-                    <img 
-                        src="Vente.png" 
-                        alt="Projet Tkinter 2" 
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Tkinter+Project+2'"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
+                    <button type="button" class="project-image-trigger" data-open-project-details aria-haspopup="dialog" aria-controls="projectDetailsDialog" aria-label="Afficher les détails du système de gestion de pharmacie">
+                        <img
+                            src="Vente.png"
+                            alt="Interface du système de gestion de pharmacie"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://placehold.co/600x400/1e293b/38bdf8?text=Tkinter+Project+2'"
+                        >
+                        <span class="absolute bottom-3 left-4 rounded-full bg-gray-900/80 px-3 py-1 text-xs font-semibold text-white">Cliquer pour les détails</span>
+                    </button>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -2437,6 +2449,28 @@ html {
                     <a class="project-dialog-link" href="https://github.com/Aymen-ELYAAKOUBI/Fast-Delevery-App" target="_blank" rel="noopener noreferrer">
                         Voir le code sur GitHub
                     </a>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="projectDetailsDialog" class="project-dialog" aria-labelledby="projectDetailsTitle">
+            <div class="project-dialog-content">
+                <div class="project-dialog-header">
+                    <div>
+                        <span id="projectDetailsKicker" class="project-dialog-kicker">Détail du projet</span>
+                        <h2 id="projectDetailsTitle"></h2>
+                        <span class="project-status">Projet présenté dans le portfolio</span>
+                    </div>
+                    <button type="button" class="project-dialog-close" data-close-project-details aria-label="Fermer les détails">&times;</button>
+                </div>
+                <h3>À propos du projet</h3>
+                <p id="projectDetailsDescription"></p>
+                <div id="projectDetailsTechnologiesSection">
+                    <h3>Technologies</h3>
+                    <div id="projectDetailsTechnologies" class="project-stack"></div>
+                </div>
+                <div class="project-dialog-actions">
+                    <a id="projectDetailsGithub" class="project-dialog-link" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
                 </div>
             </div>
         </dialog>
@@ -2845,6 +2879,48 @@ html {
                     if (event.target === dialog) dialog.close();
                 });
             });
+
+            // Generic details for the remaining project cards
+            const projectDetailsDialog = document.getElementById('projectDetailsDialog');
+            const projectDetailsTitle = document.getElementById('projectDetailsTitle');
+            const projectDetailsDescription = document.getElementById('projectDetailsDescription');
+            const projectDetailsTechnologies = document.getElementById('projectDetailsTechnologies');
+            const projectDetailsTechnologiesSection = document.getElementById('projectDetailsTechnologiesSection');
+            const projectDetailsGithub = document.getElementById('projectDetailsGithub');
+            const closeProjectDetails = document.querySelector('[data-close-project-details]');
+
+            document.querySelectorAll('[data-open-project-details]').forEach((trigger) => {
+                trigger.addEventListener('click', () => {
+                    const card = trigger.closest('.group');
+                    if (!card || !projectDetailsDialog) return;
+
+                    const title = card.querySelector('.p-6 h3')?.textContent.trim() || 'Projet';
+                    const description = card.querySelector('.p-6 p')?.textContent.trim() || '';
+                    const technologyTags = Array.from(card.querySelectorAll('.p-6 .flex.flex-wrap.gap-2 span'));
+                    const repositoryLink = card.querySelector('.p-6 a[href*="github.com"]');
+
+                    projectDetailsTitle.textContent = title;
+                    projectDetailsDescription.textContent = description;
+                    projectDetailsTechnologies.replaceChildren(
+                        ...technologyTags.map((tag) => {
+                            const chip = document.createElement('span');
+                            chip.textContent = tag.textContent.trim();
+                            return chip;
+                        })
+                    );
+                    projectDetailsTechnologiesSection.hidden = technologyTags.length === 0;
+                    projectDetailsGithub.hidden = !repositoryLink;
+                    if (repositoryLink) projectDetailsGithub.href = repositoryLink.href;
+                    projectDetailsDialog.showModal();
+                });
+            });
+
+            if (projectDetailsDialog && closeProjectDetails) {
+                closeProjectDetails.addEventListener('click', () => projectDetailsDialog.close());
+                projectDetailsDialog.addEventListener('click', (event) => {
+                    if (event.target === projectDetailsDialog) projectDetailsDialog.close();
+                });
+            }
 
             // Form handling
             const form = document.getElementById('contactForm');
